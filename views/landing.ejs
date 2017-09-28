@@ -29,19 +29,47 @@
 	.fotorama__wrap{
 		margin:auto;
 	}
+	.logo {
+	 font-size: 100%;
+	 position: fixed;
+	 width:10%;
+	 z-index: 1000;
+	 margin:auto;
+	 top:-2.5em;
+	}
+	
+	.logo img{
+		width:3em;
+		height:3em;
+	}
 
-
-	@media only screen and (max-width:600px){
+	@media only screen and (max-width:770px){
 		label .control-label .col-sm-2 {
-    font-size: 1.3em;
+    	font-size: 1.3em;
+		}
+		
+		.row.margin{
+		margin :0;
 		}
 	}
+	
+	.row.margin{
+		margin : 100px 100px 50px 100px;
+	}
+/*	.col-md-10.col-md-offset-1.col-xs-12.col-xs-offset-0 {*/
+/*    padding-top:100px;*/
+/*}*/
 	
 
 	</style>
 
 </head>
 <body>
+				<div class="logo">
+                <!--No Logo-->
+                <h1><a href=""></a><img src="images/logo.png"></h1>
+                <!--Logo Uploaded-->
+            </div>
 
 <div id="fullpage">
 	
@@ -78,14 +106,15 @@
 			var brows_size = getBrowsSize(); // gets browser's width /height
 			console.log(brows_size['width'])
 			console.log($(window).width())
+			alert($(window).width())
 			// array with images addresses
 			var fotor_imgs = ['images/11', 'images/12'];
 			// set indice "a" added in images address for mobile
-			var i_mo = (brows_size['width'] < 800) ? 'a' : '';
+			var i_mo = (brows_size['width'] <=        980) ? 'a' : '';
 
 			window.addEventListener('resize', function(e){
 			var brows_size2 = getBrowsSize();
-			var i_mo2 = (brows_size2['width'] < 800) ? 'a' : '';
+			var i_mo2 = (brows_size2['width'] < 980) ? 'a' : '';
 			if(i_mo2 !== i_mo) window.location.replace(window.location.href);
 			}, false);
 
@@ -107,13 +136,13 @@
 		<!-- FIRST SLIDER -->
 			<div class="intro">
 				<div class="container padding">
-        	<div class="row">
-          	<div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0 nopadding">
+        			<div class="row margin">
+          		<div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
             <!-- 16:9 aspect ratio -->
-	          <div class="embed-responsive embed-responsive-16by9">
-	          	<iframe id="ytiframe" class="embed-responsive-item"  height="455" src="https://www.youtube.com/embed/bLxEXzZgC9U?rel=0" allowfullscreen frameborder="0"></iframe>
-	          </div>
-						<br>
+		          <div class="embed-responsive embed-responsive-4by3">
+		          	<iframe id="ytiframe" class="embed-responsive-item"  height="455" src="https://www.youtube.com/embed/bLxEXzZgC9U?rel=0" allowfullscreen frameborder="0"></iframe>
+		          </div>
+					<br>
             	<a href="https://youtube.com"><u>Watch more on Youtube</u></a>
           	</div>
         	</div>
