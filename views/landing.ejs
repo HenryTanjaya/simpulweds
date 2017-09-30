@@ -56,9 +56,28 @@
 	.row.margin{
 		margin : 100px 100px 50px 100px;
 	}
-/*	.col-md-10.col-md-offset-1.col-xs-12.col-xs-offset-0 {*/
-/*    padding-top:100px;*/
-/*}*/
+	
+	@media only screen and (max-width: 968px){
+		.container .padding{
+			width:900px;
+		}
+		
+		.row.margin{
+			margin:0;
+		}
+		
+		.container.col-sm-12.col-xs-12.col-md-6{
+			font-size:1.8em;
+		}
+		.form-horizontal .control-label {
+			font-size: 20px; 
+			
+		}
+		
+	}
+	
+	
+	
 	
 
 	</style>
@@ -109,13 +128,13 @@
 			// array with images addresses
 			var fotor_imgs = ['images/11', 'images/12'];
 			// set indice "a" added in images address for mobile
-			var i_mo = (brows_size['width'] <=        980) ? 'a' : '';
+			var i_mo = (brows_size['width'] <=980) ? 'a' : '';
 
-			window.addEventListener('resize', function(e){
-			var brows_size2 = getBrowsSize();
-			var i_mo2 = (brows_size2['width'] < 980) ? 'a' : '';
-			if(i_mo2 !== i_mo) window.location.replace(window.location.href);
-			}, false);
+				// window.addEventListener('resize', function(e){
+				// var brows_size2 = getBrowsSize();
+				// var i_mo2 = (brows_size2['width'] < 980) ? 'a' : '';
+				// if(i_mo2 !== i_mo) window.location.replace(window.location.href);
+				// }, false);
 
 			// set and add the html with images in #fotor_1
 			var add_imgs = '';
@@ -198,7 +217,7 @@
 				<div class="form-group">
 		      <label class="control-label col-sm-2" for="country">Country:</label>
 		      <div class="col-sm-9">
-		        <input type="text" class="form-control" id="country" placeholder="Enter country" name="country">
+		        <input type="text" class="form-control " id="country" placeholder="Enter country" name="country">
 		      </div>
 		    </div>
 		    <div class="form-group">
