@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var nodemailer = require("nodemailer");
-var xoauth2 = require("xoauth2");
+var flash = require('connect-flash');
 var GMAIL_PASSWORD = process.env.GMAIL_PASSWORD;
 
 
@@ -10,10 +10,16 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+app.use(flash());
+app.use(require("express-session")({
+    secret: "Once again Rusty wins cutest dog!",
+    resave: false,
+    saveUninitialized: false
+}));
 
 
 app.get("/", function(req, res){
-    res.render("landing");
+    res.render("landing",{message:req.flash("success")});
     
 });
 
@@ -24,7 +30,7 @@ app.post("/send",function(req,res){
       service: 'gmail',
       auth: {
         user: 'alderbeagle@gmail.com',
-        pass: GMAIL_PASSWORD || 'Alderbeagle2017'
+        pass: GMAIL_PASSWORD
       }
     });
     
@@ -43,10 +49,13 @@ app.post("/send",function(req,res){
         console.log(error);
       } else {
         console.log('Email sent: ' + info.response);
-        res.send("Submitted");
-        res.redirect("/");
+        req.flash('success', 'Your message has been submitted');
+        res.redirect('/');
       }
     });
+    
+    
+    
 })
 
 app.listen(process.env.PORT, process.env.IP, function(){
