@@ -32,32 +32,48 @@
 	.logo {
 	 font-size: 100%;
 	 position: fixed;
-	 width:10%;
+	 width:3.5em;
 	 z-index: 1000;
 	 margin:auto;
-	 top:-2.5em;
+	 top:-1em;
+	 left:1em;
 	}
 	
-	.logo img{
-		width:3em;
-		height:3em;
-	}
-
-	@media only screen and (max-width:1024px){
-		label .control-label .col-sm-2 {
-    	font-size: 1.3em;
-		}
+	img.logo-header-width{
+		width:3.5em;
 		
-		.row.margin{
-		margin :0;
-		}
+	}
+	
+	.logo-footer{
+	 font-size: 100%;
+	 position: fixed;
+	 z-index: 1000;
+	 margin:auto;
+	 bottom:1em;
+	 /*left:102em;*/
+	 right:1em;
+	 
+	}
+	
+	img.logo-footer-width{
+		width:1em;
+		
 	}
 	
 	.row.margin{
 		margin : 100px 100px 50px 100px;
 	}
-	
-	@media only screen and (max-width: 1024px){
+
+
+	@media only screen and (max-width:1024px){
+		label.control-label.col-sm-2 {
+    	font-size: 1.7em;
+		}
+
+		.row.margin{
+		margin :0;
+		}
+		
 		.container .padding{
 			width:900px;
 		}
@@ -86,7 +102,13 @@
 <body>
 	<div class="logo">
     <!--No Logo-->
-    	<h1><a href=""></a><img src="images/logo.png"></h1>
+    	<h1><a href=""></a><img class="logo-header-width" src="images/logo-text.png"></h1>
+    <!--Logo Uploaded-->
+  	</div>
+  	
+  	<div class="logo-footer">
+    <!--No Logo-->
+    	<h1><a href=""></a><img class="logo-footer-width" src="images/logo.png"></h1>
     <!--Logo Uploaded-->
   	</div>
 
