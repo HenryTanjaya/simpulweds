@@ -1,3 +1,73 @@
-u {
+ u {
     font-size:20px;
 }
+
+.fotorama__wrap{
+		margin:auto;
+	}
+	.logo {
+	 font-size: 100%;
+	 position: fixed;
+	 width:3.5em;
+	 z-index: 1000;
+	 margin:auto;
+	 top:-1em;
+	 left:1em;
+	}
+	
+	.logo-header-width{
+		width:3.5em;
+		
+	}
+	
+	.logo-footer{
+	 font-size: 100%;
+	 position: fixed;
+	 z-index: 1000;
+	 margin:auto;
+	 bottom:1em;
+	 /*left:102em;*/
+	 right:1em;
+	 
+	}
+	
+	.logo-footer-width{
+		width:1em;
+		
+	}
+	
+	.row.margin{
+		margin : 100px 100px 50px 100px;
+	}
+
+
+	@media only screen and (max-width:1024px){
+		.control-label.col-sm-2 {
+    	font-size: 1.7em;
+		}
+
+		.row.margin{
+		margin :0;
+		}
+		
+		.container .padding{
+			width:900px;
+		}
+		
+		.row.margin{
+			margin:0;
+		}
+		
+		.container.col-sm-12.col-xs-12.col-md-6{
+			font-size:1.8em;
+		}
+		.form-horizontal .control-label {
+			font-size: 20px; 
+			
+		}
+		
+	}
+	
+	
+	
+	
