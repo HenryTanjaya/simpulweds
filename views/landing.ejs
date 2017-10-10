@@ -11,46 +11,75 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
 	<link rel="stylesheet" type="text/css" href="../stylesheets/app.css" media="all" />
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
 
 	<!-- <script type="text/javascript" src="../vendors/scrolloverflow.js"></script> -->
 
 	<script type="text/javascript" src="../js/jquery.fullPage.min.js"></script>
 	<script type="text/javascript">
-		$(document).ready(function() {
-			$('#fullpage').fullpage({
-				sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff']
-			});
+	$(document).ready(function() {
+		$('#fullpage').fullpage({
+			sectionsColor: ['#ffffff', '#ffffff', '#ffffff', '#ffffff', '#ffffff']
 		});
+	});
 
 	</script>
 
 </head>
 <body>
-	<div class="logo">
-    <!--No Logo-->
-    	<h1><a href=""></a><img class="logo-header-width" src="images/logo-text.png"></h1>
-    <!--Logo Uploaded-->
-  	</div>
-  	
-  	<div class="logo-footer">
-    <!--No Logo-->
-    	<h1><a href=""></a><img class="logo-footer-width" src="images/logo.png"></h1>
-    <!--Logo Uploaded-->
-  	</div>
 
-<div id="fullpage">
-	<div class="section" id="section0">
-		<div id="fotor_1"
-		 class="fotorama"
-		 data-ratio="4000/2000"
-		 data-fit="cover"
-		 data-nav="false"
-     data-height="100%"
-		 data-width="100%">
-		<div>
-		</div>
+	<!-- <div class="logo"> -->
+		<!--No Logo-->
+		<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-inner">
+							<div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img class="logo-header-width" src="images/logo.png"></a>
+    </div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!-- <li><a href="#">Link</a></li> -->
+      </ul>
+    </div>
+            </div>
+        </div>
+		<!--Logo Uploaded-->
+	<!-- </div> -->
+
+	<div id="fullpage">
+		<div class="section" id="section0">
+			<div id="fotor_1"
+			class="fotorama"
+			data-ratio="4000/2000"
+			data-fit="cover"
+			data-nav="false"
+			data-height="100%"
+			data-width="100%">
+			<div>
+			</div>
 
 			<script>
 
@@ -58,18 +87,18 @@
 
 			// returns an array with height and width of the window
 			function getBrowsSize() {
-			var brows_size = new Array;
-			if (self.innerHeight) {
-			brows_size['height'] = self.innerHeight;
-			brows_size['width'] = self.innerWidth;
-			} else if (document.documentElement && document.documentElement.clientHeight) {
-			brows_size['height'] = document.documentElement.clientHeight;
-			brows_size['width'] = document.documentElement.Width;
-			} else if (document.body) {
-			brows_size['height'] = document.body.clientHeight;
-			brows_size['width'] = document.body.clientWidth;
-			}
-			return brows_size;
+				var brows_size = new Array;
+				if (self.innerHeight) {
+					brows_size['height'] = self.innerHeight;
+					brows_size['width'] = self.innerWidth;
+				} else if (document.documentElement && document.documentElement.clientHeight) {
+					brows_size['height'] = document.documentElement.clientHeight;
+					brows_size['width'] = document.documentElement.Width;
+				} else if (document.body) {
+					brows_size['height'] = document.body.clientHeight;
+					brows_size['width'] = document.body.clientWidth;
+				}
+				return brows_size;
 			}
 			var brows_size = getBrowsSize(); // gets browser's width /height
 			console.log(brows_size['width'])
@@ -79,17 +108,17 @@
 			// set indice "a" added in images address for mobile
 			var i_mo = (brows_size['width'] <=980) ? 'a' : '';
 
-				// window.addEventListener('resize', function(e){
-				// var brows_size2 = getBrowsSize();
-				// var i_mo2 = (brows_size2['width'] < 980) ? 'a' : '';
-				// if(i_mo2 !== i_mo) window.location.replace(window.location.href);
-				// }, false);
+			// window.addEventListener('resize', function(e){
+			// var brows_size2 = getBrowsSize();
+			// var i_mo2 = (brows_size2['width'] < 980) ? 'a' : '';
+			// if(i_mo2 !== i_mo) window.location.replace(window.location.href);
+			// }, false);
 
 			// set and add the html with images in #fotor_1
 			var add_imgs = '';
 			for(var i=0; i<fotor_imgs.length; i++) {
-			add_imgs += '<a href="'+ fotor_imgs[i] + i_mo +'.jpg"><img src="'+ fotor_imgs[i] + i_mo +'.jpg"></a>';
-			console.log(add_imgs)
+				add_imgs += '<a href="'+ fotor_imgs[i] + i_mo +'.jpg"><img src="'+ fotor_imgs[i] + i_mo +'.jpg"></a>';
+				console.log(add_imgs)
 			}
 			document.getElementById('fotor_1').innerHTML = add_imgs;
 			console.log(document.getElementById('fotor_1'))
@@ -101,18 +130,24 @@
 	<!-- SECTION 2 -->
 	<div class="section" id="section1">
 		<!-- FIRST SLIDER -->
-			<div class="intro">
-				<div class="container padding">
-        			<div class="row margin">
-          		<div class="col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0">
-            <!-- 16:9 aspect ratio -->
-		          <div class="embed-responsive embed-responsive-4by3">
-		          	<iframe id="ytiframe" class="embed-responsive-item"  height="455" src="https://www.youtube.com/embed/bLxEXzZgC9U?rel=0" allowfullscreen frameborder="0"></iframe>
-		          </div>
-          	</div>
-        	</div>
+		<div class="intro">
+			<div class="container">
+				<div class="col-md-6 col-sm-12 container padding">
+					<div class="col-xs-12 col-xs-offset-0">
+						<!-- 16:9 aspect ratio -->
+						<div class="embed-responsive embed-responsive-4by3">
+							<iframe id="ytiframe" class="embed-responsive-item"  height="455" src="https://www.youtube.com/embed/bLxEXzZgC9U?rel=0" allowfullscreen frameborder="0"></iframe>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-12 container padding">
+					<div class="row margin slide1">
+						asdt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+						<h4 class="title-article">Lorem Ipsum</h4>
+					</div>
 				</div>
 			</div>
+		</div>
 		<!-- //FIRST SLIDER -->
 	</div>
 	<!-- SECTION 2 -->
@@ -121,16 +156,24 @@
 	<div class="section" id="section2">
 		<div class="section" id="section2">
 			<div class="intro">
-				<div class="container padding">
-					<div class="fotorama" data-width="700" data-ratio="700/467" data-max-width="100%" data-nav="thumbs">
-					  <img src="images/1.jpg">
-					  <img src="images/2.jpg">
-					  <img src="images/3.jpg">
-					  <img src="images/4.jpg">
-					  <img src="images/5.jpg">
-					  <img src="images/6.jpg">
-					  <img src="images/7.jpg">
-					  <img src="images/8.jpg">
+				<div class="container">
+					<div class="col-md-6 col-sm-12 container padding">
+						<div class="row margin slide2">
+							asdt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+							<h4 class="title-article">Lorem Ipsum</h4>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12 container padding">
+						<div class="fotorama" data-width="700" data-ratio="700/467" data-max-width="100%" data-nav="thumbs">
+							<img src="images/1.jpg">
+							<img src="images/2.jpg">
+							<img src="images/3.jpg">
+							<img src="images/4.jpg">
+							<img src="images/5.jpg">
+							<img src="images/6.jpg">
+							<img src="images/7.jpg">
+							<img src="images/8.jpg">
+						</div>
 					</div>
 				</div>
 			</div>
@@ -147,37 +190,37 @@
 		</div>
 
 		<div class="container col-sm-12 col-xs-12 col-md-3 col-md-offset-3">
-		  <form class="form-horizontal" action="send" method="POST">
-		  	<div class="form-group" >
-		      <label class="control-label col-sm-2"  for="name">Name:</label>
-		      <div class="col-sm-9">
-		        <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-		      </div>
-		    </div>
-		    <div class="form-group">
-		      <label class="control-label col-sm-2" for="email">Email:</label>
-		      <div class="col-sm-9">
-		        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-		      </div>
-		    </div>
-				<div class="form-group">
-		      <label class="control-label col-sm-2" for="country">Country:</label>
-		      <div class="col-sm-9">
-		        <input type="text" class="form-control " id="country" placeholder="Enter country" name="country">
-		      </div>
-		    </div>
-		    <div class="form-group">
-		        <label class="control-label col-sm-2" for="message">Message:</label>
-		      <div class="col-sm-9">
-		        <textarea class="form-control" rows="5" id="message" placeholder="Enter Message" name="message"></textarea>
-		    </div>
-		    </div>
-		    <div class="form-group">
-				<div class="col-sm-8">
-					<button type="submit" class="btn btn-default" style="text-align:right">Submit</button>
+			<form class="form-horizontal" action="send" method="POST">
+				<div class="form-group" >
+					<label class="control-label col-sm-2"  for="name">Name:</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
+					</div>
 				</div>
-		    </div>
-		  </form>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="email">Email:</label>
+					<div class="col-sm-9">
+						<input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="country">Country:</label>
+					<div class="col-sm-9">
+						<input type="text" class="form-control " id="country" placeholder="Enter country" name="country">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-sm-2" for="message">Message:</label>
+					<div class="col-sm-9">
+						<textarea class="form-control" rows="5" id="message" placeholder="Enter Message" name="message"></textarea>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-8">
+						<button type="submit" class="btn btn-default" style="text-align:right">Submit</button>
+					</div>
+				</div>
+			</form>
 		</div>
 
 		<div class="container col-sm-12 col-xs-12 col-md-6" style="text-align:left">

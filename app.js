@@ -1,9 +1,9 @@
-var express = require("express");
-var app = express();
-var bodyParser = require("body-parser");
-var nodemailer = require("nodemailer");
-var flash = require('connect-flash');
-var GMAIL_PASSWORD = process.env.GMAIL_PASSWORD;
+var express = require("express"),
+    app = express(),
+    bodyParser = require("body-parser"),
+    nodemailer = require("nodemailer"),
+    flash = require('connect-flash'),
+    GMAIL_PASSWORD = process.env.GMAIL_PASSWORD;
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -20,12 +20,12 @@ app.use(require("express-session")({
 
 app.get("/", function(req, res){
     res.render("landing",{message:req.flash("success")});
-    
+
 });
 
 app.post("/send",function(req,res){
 
-    
+
     var transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -33,7 +33,7 @@ app.post("/send",function(req,res){
         pass: GMAIL_PASSWORD
       }
     });
-    
+
     var mailOptions = {
       from: 'simpulweds@gmail.com',
       to: 'simpulweds@gmail.com',
@@ -43,7 +43,7 @@ app.post("/send",function(req,res){
             '<br><b>Country : </b>'+req.body.country +
             '<br><b>Message : </b>'+req.body.message
     };
-    
+
     transporter.sendMail(mailOptions, function(error, info){
       if (error) {
         console.log(error);
@@ -53,11 +53,11 @@ app.post("/send",function(req,res){
         res.redirect('/');
       }
     });
-    
-    
-    
+
+
+
 })
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(3000, function(){
    console.log("Simpul Server Has Started!");
 });

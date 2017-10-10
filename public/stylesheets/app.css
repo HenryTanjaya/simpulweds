@@ -5,39 +5,61 @@
 .fotorama__wrap{
 		margin:auto;
 	}
+
 	.logo {
 	 font-size: 100%;
 	 position: fixed;
 	 width:3.5em;
 	 z-index: 1000;
 	 margin:auto;
-	 top:-1em;
-	 left:1em;
+	 top:0.5em;
+	 left:3em;
 	}
-	
+
 	.logo-header-width{
-		width:3.5em;
-		
+		width:3em;
+
 	}
-	
-	.logo-footer{
-	 font-size: 100%;
-	 position: fixed;
-	 z-index: 1000;
-	 margin:auto;
-	 bottom:1em;
-	 /*left:102em;*/
-	 right:1em;
-	 
+  .navbar.navbar-inverse.navbar-fixed-top{
+    border-width: 0px;
+   -webkit-box-shadow: 0px 0px;
+   box-shadow: 0px 0px;
+   background-color: rgba(0,0,0,0.0);
+   background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+   background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+   background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+  }
+
+  .navbar-inverse .navbar-nav > li > a{
+    color:black;
+  }
+
+  .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+      color: black;
+      background-color: transparent;
+  }
+
+
+  .title-article{
+    margin-top:20px;
+  }
+
+	.row.margin.slide1{
+		margin : 0px ;
+    margin-left: 20px;
+    margin-top:10px;
+    text-align: left;
+    letter-spacing: 2px;
+    line-height: 2.5em;
 	}
-	
-	.logo-footer-width{
-		width:1em;
-		
-	}
-	
-	.row.margin{
-		margin : 100px 100px 50px 100px;
+
+  .row.margin.slide2{
+		margin : 0px ;
+    margin-right: 20px;
+    margin-top:10px;
+    text-align: right;
+    letter-spacing: 2px;
+    line-height: 2.5em;
 	}
 
 
@@ -49,25 +71,22 @@
 		.row.margin{
 		margin :0;
 		}
-		
-		.container .padding{
-			width:900px;
-		}
-		
-		.row.margin{
-			margin:0;
-		}
-		
+
 		.container.col-sm-12.col-xs-12.col-md-6{
 			font-size:1.8em;
 		}
 		.form-horizontal .control-label {
-			font-size: 20px; 
-			
+			font-size: 20px;
+
 		}
-		
+
 	}
-	
-	
-	
-	
+
+
+  @media (min-width: 768px){
+
+    .navbar-nav>li>a {
+        padding-top: 35px;
+        padding-bottom: 15px;
+    }
+  }
