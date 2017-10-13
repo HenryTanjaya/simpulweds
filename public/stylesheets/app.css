@@ -1,92 +1,157 @@
- u {
-    font-size:20px;
+
+u {
+  font-size:20px;
 }
 
 .fotorama__wrap{
-		margin:auto;
-	}
+  margin:auto;
+}
 
-	.logo {
-	 font-size: 100%;
-	 position: fixed;
-	 width:3.5em;
-	 z-index: 1000;
-	 margin:auto;
-	 top:0.5em;
-	 left:3em;
-	}
+.logo {
+  font-size: 100%;
+  position: fixed;
+  z-index: 1000;
+  margin:auto;
+  left:3em;
+}
+.navbar-brand {
+  height: 50px;
+  padding: 35px 35px
+}
 
-	.logo-header-width{
-		width:3em;
+.logo-header-width{
+  width:2em;
 
-	}
-  .navbar.navbar-inverse.navbar-fixed-top{
-    border-width: 0px;
-   -webkit-box-shadow: 0px 0px;
-   box-shadow: 0px 0px;
-   background-color: rgba(0,0,0,0.0);
-   background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
-   background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
-   background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+.navbar.navbar-inverse.navbar-fixed-top{
+  border-width: 0px;
+  -webkit-box-shadow: 0px 0px;
+  box-shadow: 0px 0px;
+  background-color: rgba(0,0,0,0.0);
+  background-image: -webkit-gradient(linear, 50.00% 0.00%, 50.00% 100.00%, color-stop( 0% , rgba(0,0,0,0.00)),color-stop( 100% , rgba(0,0,0,0.00)));
+  background-image: -webkit-linear-gradient(270deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+  background-image: linear-gradient(180deg,rgba(0,0,0,0.00) 0%,rgba(0,0,0,0.00) 100%);
+}
+
+.navbar-inverse .navbar-nav > li > a{
+  color:white;
+  font-size: 1.3em;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover{
+  color:black
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  color: black;
+  background-color: transparent;
+}
+
+
+.title-article{
+  margin-top:20px;
+  margin-bottom: 10px;
+  font-family: 'IrisUPC';
+  font-weight: bold;
+}
+
+.row.margin.slide1{
+  margin : 0px ;
+  margin-left: 20px;
+  margin-top:10px;
+  text-align: left;
+  letter-spacing: 1.9px;
+  line-height: 1.8em;
+  font-size: 1.4em;
+  font-family: 'IrisUPC';
+}
+div#section1{
+  background:url('../images/pattern1.png');
+  background-size:cover;
+}
+div#section2{
+  background:url('../images/pattern2.png');
+  background-size:cover;
+}
+
+.row.margin.slide2{
+  margin : 0px ;
+  margin-right: 20px;
+  margin-top:10px;
+  text-align: right;
+  letter-spacing: 1.9px;
+  line-height: 1.8em;
+  font-size: 1.4em;
+  font-family: 'IrisUPC';
+}
+
+.nav>li>a {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ul.nav.navbar-nav.navbar-right{
+  margin-right: 250px;
+}
+.logo h6{
+  position: fixed;
+  bottom:40px;
+  z-index: 10;
+  transform: rotate(270deg);
+	transform-origin: left top 0;
+  font-family: "IrisUPC";
+  font-size: 1em;
+  letter-spacing: 0.2em;
+}
+h2 {
+    font-family: 'Bodoni';
+}
+
+@media only screen and (max-width:1024px){
+  .control-label.col-sm-2 {
+    font-size: 1.7em;
   }
 
-  .navbar-inverse .navbar-nav > li > a{
-    color:black;
+  .row.margin{
+    margin :0;
   }
 
-  .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-      color: black;
-      background-color: transparent;
+  .container.col-sm-12.col-xs-12.col-md-6{
+    font-size:1.8em;
+  }
+  .form-horizontal .control-label {
+    font-size: 20px;
+
+  }
+  .row.margin.slide2 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+  }
+  .row.margin.slide1 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+  }
+  .navbar-inverse .navbar-nav > li > a {
+    color: white;
+    font-size: 2.2em;
   }
 
+}
 
-  .title-article{
-    margin-top:20px;
+
+@media (min-width: 768px){
+
+  .navbar-nav>li>a {
+    padding-top: 35px;
+    padding-bottom: 15px;
+    font-family: 'IrisUPC';
+    letter-spacing: 1.5px;
+    font-size: 12px;
   }
 
-	.row.margin.slide1{
-		margin : 0px ;
-    margin-left: 20px;
-    margin-top:10px;
-    text-align: left;
-    letter-spacing: 2px;
-    line-height: 2.5em;
-	}
-
-  .row.margin.slide2{
-		margin : 0px ;
-    margin-right: 20px;
-    margin-top:10px;
-    text-align: right;
-    letter-spacing: 2px;
-    line-height: 2.5em;
-	}
-
-
-	@media only screen and (max-width:1024px){
-		.control-label.col-sm-2 {
-    	font-size: 1.7em;
-		}
-
-		.row.margin{
-		margin :0;
-		}
-
-		.container.col-sm-12.col-xs-12.col-md-6{
-			font-size:1.8em;
-		}
-		.form-horizontal .control-label {
-			font-size: 20px;
-
-		}
-
-	}
-
-
-  @media (min-width: 768px){
-
-    .navbar-nav>li>a {
-        padding-top: 35px;
-        padding-bottom: 15px;
-    }
+  .navbar-nav {
+    float: left;
+    margin: 0;
+    margin-left:100px;
   }
+}

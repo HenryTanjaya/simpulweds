@@ -1,0 +1,10 @@
+@font-face {
+  font-family: IrisUPC ;
+  src:url('upcil.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+@font-face {
+  font-family: 'Bodoni';
+  src:url('tt0035m_.ttf') format('truetype'),
+       url('tt0036m_.ttf') format('truetype');
+}
