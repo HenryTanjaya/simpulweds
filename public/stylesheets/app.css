@@ -103,8 +103,17 @@ ul.nav.navbar-nav.navbar-right{
   font-size: 1em;
   letter-spacing: 0.2em;
 }
-h2 {
-    font-family: 'Bodoni';
+h2{
+  font-family:'IrisUPC'
+}
+
+span.contact-title{
+  font-size:1.5em;
+  line-height: 2;
+}
+
+p {
+  line-height: 1.5;
 }
 
 @media only screen and (max-width:1024px){

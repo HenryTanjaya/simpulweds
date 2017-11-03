@@ -57,7 +57,7 @@ app.post("/",function(req,res){
 
 
 })
-
-app.listen(process.env.PORT, process.env.IP , function(){
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, function(){
    console.log("Simpul Server Has Started!");
 });
