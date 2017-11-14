@@ -114,6 +114,39 @@ span.contact-title{
 
 p {
   line-height: 1.5;
+  padding:15px;
+  font-family: 'IrisUPC';
+  font-size:20px
+}
+
+label.control-label.col-sm-2{
+  font-family: 'Iris UPC';
+}
+.form-horizontal .control-label{
+  right: 20px;
+}
+form.form-horizontal{
+  padding:15px;
+}
+
+.fp-tableCell{
+  height: 0px !important;
+}
+
+.carousel-control{
+  width:5%;
+  opacity: 0;
+}
+
+.carousel-control:hover{
+  opacity: 0;
+}
+
+.carousel-control:focus{
+  opacity: 0;
+}
+.carousel-inner>.item{
+  transition:transform 1.2s ease-in-out;
 }
 
 @media only screen and (max-width:1024px){
@@ -135,6 +168,7 @@ p {
   .row.margin.slide2 {
     font-size: 2.5em;
     line-height: 1.2em;
+    text-align: left;
   }
   .row.margin.slide1 {
     font-size: 2.5em;
@@ -143,6 +177,9 @@ p {
   .navbar-inverse .navbar-nav > li > a {
     color: white;
     font-size: 2.2em;
+  }
+  h2{
+    font-size: 50px;
   }
 
 }
@@ -162,5 +199,10 @@ p {
     float: left;
     margin: 0;
     margin-left:100px;
+  }
+
+  p{
+    font-size: 30px;
+    line-height: 1.2;
   }
 }
