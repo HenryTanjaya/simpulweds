@@ -164,7 +164,7 @@ header nav:nth-child(1) li{
   background-position: 50% 50%;
   background-repeat: no-repeat;
   z-index: -1;
-  background-image: url(https://i.imgur.com/xYqsUNJ.jpg);
+  background-image: url(../images/11.jpg);
 }
 
 .hero .background-image .slideshow li{
@@ -182,7 +182,7 @@ header nav:nth-child(1) li{
 }
 
 .hero .background-image .slideshow li:nth-child(1) {
-  background-image: url(http://humas.sumutprov.go.id/wp-content/uploads/2017/08/DSC_4532-copy.jpg);
+  background-image: url(../images/11.jpg);
   animation-delay: 10s;
 }
 /*.hero .background-image .slideshow li:nth-child(2) {
