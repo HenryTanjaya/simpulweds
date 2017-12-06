@@ -19,7 +19,7 @@ app.use(require("express-session")({
 
 
 app.get("/", function(req, res){
-    res.render("landing",{message:req.flash("success")});
+    res.render("landing1",{message:req.flash("success")});
 
 });
 
