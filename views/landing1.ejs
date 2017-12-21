@@ -18,16 +18,36 @@
 <body>
   <!-- Forked from a template on Tutorialzine: https://tutorialzine.com/2016/06/freebie-landing-page-template-with-flexbox -->
   <header>
-    <nav>
-    <a href="/"><img id="logo" src="/images/logo.png" class="logo"></a>
-      <li><a href="/#home">HOME</a></li>
-      <li><a href="/#film">FILM</a></li>
-      <li><a href="/#photo">PHOTO</a></li>
-      <li><a href="/#contact">CONTACT</a></li>
-    </nav>
-    <nav>
-      <li><a href="#">FACEBOOK</a></li>
-      <li><a href="#">INSTAGRAM</a></li>
+    <!-- <nav class="navbar navbar-expand-md bg-dark navbar-dark"> -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <a class="navbar-brand" href="#"><img id="logo" src="/images/logo.png" class="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">PHOTO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">FILM</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">CONTACT</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="#">FACEBOOK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">INSTAGRAM</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -72,13 +92,13 @@
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
-            <img class="d-block img-fluid" src="https://www.arenacamps.com/datastore/imagestore/original/1485516965kamp_stupice1-280616.jpg?v=1485516965" alt="First slide">
+            <img class="d-block img-fluid" src="http://res.cloudinary.com/simpulweds/image/upload/v1507882933/Slideshow/1.jpg" alt="First slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block img-fluid" src="https://www.decathlon.co.uk/ecuk/static/wedze/assets/img/camping/camping-background.jpg" alt="Second slide">
+            <img class="d-block img-fluid" src="http://res.cloudinary.com/simpulweds/image/upload/v1507882942/Slideshow/3.jpg" alt="Second slide">
           </div>
           <div class="carousel-item">
-            <img class="d-block img-fluid" src="https://www.decathlon.co.uk/ecuk/static/wedze/assets/img/camping/camping-background.jpg" alt="Third slide">
+            <img class="d-block img-fluid" src="http://res.cloudinary.com/simpulweds/image/upload/v1507882931/Slideshow/5.jpg" alt="Third slide">
           </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

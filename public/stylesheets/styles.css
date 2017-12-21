@@ -26,15 +26,6 @@ a{
   color: #fff;
 }
 
-a.active{
-  color: grey;
-}
-
-a:hover {
-  opacity: 1;
-  color:grey;
-}
-
 a.btn {
   border-radius:4px;
   text-transform:uppercase;
@@ -99,7 +90,7 @@ header{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:35px 50px 0;
+  padding:15px 50px 0;
   animation: 1s fadein 0.5s forwards;
   opacity: 0;
   color: #fff;
@@ -120,21 +111,42 @@ header{
 }
 
 
-header nav{
+/* header nav{
   display:flex;
   margin-right:-15px;
-}
+} */
 
 header nav li{
   margin:0 25px;
 }
 
-header nav li a:hover{
-  text-decoration: none;
+.navbar-dark .navbar-nav .nav-link{
+  color:white;
 }
 
-header nav:nth-child(1) li{
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link{
+  color:darkgrey;
+
+}
+
+.navbar-dark .navbar-toggler{
+  color:darkgrey;
+  border-color:darkgrey;
+}
+
+.navbar-dark .navbar-toggler-icon{
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(192,192,192,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  opacity: 1;
+  color:grey;
+}
+/* header nav:nth-child(1) li{
   margin-top:8px;
+} */
+.navbar {
+  width: 100%;
 }
 
 .logo-signature {
@@ -142,7 +154,7 @@ header nav:nth-child(1) li{
   position: fixed;
   z-index: 1000;
   margin:auto;
-  left:50px;
+  left:80px;
 }
 
 .logo-signature h6 {
@@ -152,14 +164,43 @@ header nav:nth-child(1) li{
   transform: rotate(270deg);
 	transform-origin: left top 0;
   font-family: 'IrisUPC';
-  font-size: 8px;
-  letter-spacing: 0.8em;
+  font-size: 10px;
+  letter-spacing: 0.5em;
+  color:white;
 }
+h6.active{
+  color:darkgrey;
+}
+
+/* .navbar-dark .navbar-nav .nav-link{
+  color:white;
+} */
 
 @media (max-width:800px){
   header{
-    padding:20px 50px;
-    flex-direction: column;
+    padding:10px 20px;
+    width:100%;
+    display: block;
+  }
+
+  .logo-signature {
+    font-size: 100%;
+    position: fixed;
+    z-index: 1000;
+    margin:auto;
+    left:30px;
+  }
+
+  .logo-signature h6 {
+    position: fixed;
+    bottom:10px;
+    z-index: 10;
+    transform: rotate(270deg);
+  	transform-origin: left top 0;
+    font-family: 'IrisUPC';
+    font-size: 8px;
+    letter-spacing: 0.5em;
+    color:white;
   }
 
 }
@@ -183,7 +224,7 @@ header nav:nth-child(1) li{
   background-position: 50% 50%;
   background-repeat: no-repeat;
   z-index: -1;
-  background-image: url(../images/11.jpg);
+  background-image: url(http://res.cloudinary.com/simpulweds/image/upload/v1507882933/Slideshow/1.jpg);
 }
 
 .hero .background-image .slideshow li{
@@ -201,13 +242,13 @@ header nav:nth-child(1) li{
 }
 
 .hero .background-image .slideshow li:nth-child(1) {
-  background-image: url(../images/11.jpg);
+  background-image: url(http://res.cloudinary.com/simpulweds/image/upload/v1507882931/Slideshow/2.jpg);
   animation-delay: 10s;
 }
-/*.hero .background-image .slideshow li:nth-child(2) {
-  background-image: url(https://i.imgur.com/xYqsUNJ.jpg);
-  animation-delay: 20s;
-}*/
+.hero .background-image .slideshow li:nth-child(2) {
+  background-image: url(http://res.cloudinary.com/simpulweds/image/upload/v1507882942/Slideshow/3.jpg);
+  animation-delay: 15s;
+}
 
 @keyframes imageAnimation {
   0% {
@@ -244,8 +285,21 @@ header nav:nth-child(1) li{
   .hero{
     min-height: 600px;
   }
-}
 
+  .hero .background-image{
+    background-image: url(http://res.cloudinary.com/simpulweds/image/upload/v1507882933/Slideshow/Mobile/1.jpg);
+  }
+
+  .hero .background-image .slideshow li:nth-child(1) {
+    background-image: url(http://res.cloudinary.com/simpulweds/image/upload/v1513848080/Slideshow/Mobile/2.jpg);
+    animation-delay: 5s;
+  }
+  .hero .background-image .slideshow li:nth-child(2) {
+    background-image: url(http://res.cloudinary.com/simpulweds/image/upload/v1513848133/Slideshow/Mobile/3.jpg);
+    animation-delay: 10s;
+  }
+
+}
 
 /*video Section*/
 
